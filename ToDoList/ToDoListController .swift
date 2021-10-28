@@ -30,10 +30,22 @@ class ToDoListController : UITableViewController{
         navBarApperance.titleTextAttributes = [.foregroundColor: UIColor.white]
         navBarApperance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(addTask))
+        navigationItem.rightBarButtonItem?.tintColor = .white
+        
         navigationController?.navigationBar.standardAppearance = navBarApperance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarApperance
         
         
+        
+    }
+    
+    @objc private func addTask() {
+        let addTaskVC = AddTaskViewController()
+        present(addTaskVC, animated: true)
     }
 
 
