@@ -49,15 +49,14 @@ class ToDoListController : UITableViewController{
         
         navigationController?.navigationBar.standardAppearance = navBarApperance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarApperance
-        
-        
-        
     }
     
     @objc private func addTask() {
-        let addTaskVC = AddTaskViewController()
-        addTaskVC.delegate = self
-        present(addTaskVC, animated: true)
+        showAlert(with: "New Task", and: "What do you to do?")
+        
+//        let addTaskVC = AddTaskViewController()
+//        addTaskVC.delegate = self
+//        present(addTaskVC, animated: true)
     }
 
     private func fetchData() {
@@ -68,6 +67,40 @@ class ToDoListController : UITableViewController{
         } catch let error {
             print("Faild to fetch data", error)
         }
+    }
+    
+    private func showAlert(with titel: String, and message: String) {
+        let alert = UIAlertController(title: titel, message: message, preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            guard let task = alert.textFields?.first?.text, !task.isEmpty else { return }
+            self.save(task)
+        }
+        let cancelActrion = UIAlertAction(title: "Cancel", style: .destructive)
+        alert.addAction(saveAction)
+        alert.addAction(cancelActrion)
+        alert.addTextField { textField in
+            textField.placeholder = "New Task"
+        }
+        present(alert, animated: true)
+    }
+    
+    private func save(_ taskName: String) {
+        guard let entytyDescription = NSEntityDescription.entity(forEntityName: "Task", in: context) else { return }
+        guard let task = NSManagedObject(entity: entytyDescription, insertInto: context) as? Task else { return }
+        task.titel = taskName
+        taskList.append(task)
+        
+        let cellIndex = IndexPath(row: taskList.count - 1, section: 0)
+        tableView.insertRows(at: [cellIndex], with: .automatic)
+        
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+               print(error)
+            }
+        }
+        
     }
 }
 
