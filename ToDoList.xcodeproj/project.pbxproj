@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E0FB1BB274185E700E33CC5 /* Extension + AlettController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0FB1BA274185E700E33CC5 /* Extension + AlettController.swift */; };
+		8E5F00AC27305C7800D3FE59 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F00AB27305C7800D3FE59 /* StorageManager.swift */; };
 		8EAC1B1E27189B1600859E90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC1B1D27189B1600859E90 /* AppDelegate.swift */; };
 		8EAC1B2227189B1600859E90 /* ToDoListController .swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC1B2127189B1600859E90 /* ToDoListController .swift */; };
 		8EAC1B2827189B1600859E90 /* ToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC1B2627189B1600859E90 /* ToDoList.xcdatamodeld */; };
 		8EAC1B2A27189B1700859E90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EAC1B2927189B1700859E90 /* Assets.xcassets */; };
 		8EAC1B2D27189B1700859E90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EAC1B2B27189B1700859E90 /* LaunchScreen.storyboard */; };
-		8EAC1B352718AD3B00859E90 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAC1B342718AD3B00859E90 /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E0FB1BA274185E700E33CC5 /* Extension + AlettController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + AlettController.swift"; sourceTree = "<group>"; };
+		8E5F00AB27305C7800D3FE59 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		8EAC1B1A27189B1600859E90 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EAC1B1D27189B1600859E90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8EAC1B2127189B1600859E90 /* ToDoListController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoListController .swift"; sourceTree = "<group>"; };
@@ -23,7 +26,6 @@
 		8EAC1B2927189B1700859E90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EAC1B2C27189B1700859E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8EAC1B2E27189B1700859E90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8EAC1B342718AD3B00859E90 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E5F00A727305BDC00D3FE59 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8EAC1B2127189B1600859E90 /* ToDoListController .swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8E5F00A827305BFE00D3FE59 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				8EAC1B2B27189B1700859E90 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8E5F00A927305C1200D3FE59 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8EAC1B2627189B1600859E90 /* ToDoList.xcdatamodeld */,
+				8E5F00AB27305C7800D3FE59 /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8E5F00AA27305C1F00D3FE59 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				8EAC1B1D27189B1600859E90 /* AppDelegate.swift */,
+				8EAC1B2E27189B1700859E90 /* Info.plist */,
+			);
+			path = Apps;
+			sourceTree = "<group>";
+		};
+		8E5F00AD2732CD0A00D3FE59 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8E0FB1BA274185E700E33CC5 /* Extension + AlettController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8EAC1B1127189B1600859E90 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +100,12 @@
 		8EAC1B1C27189B1600859E90 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				8EAC1B1D27189B1600859E90 /* AppDelegate.swift */,
-				8EAC1B2127189B1600859E90 /* ToDoListController .swift */,
-				8EAC1B342718AD3B00859E90 /* AddTaskViewController.swift */,
+				8E5F00AD2732CD0A00D3FE59 /* Extensions */,
+				8E5F00AA27305C1F00D3FE59 /* Apps */,
+				8E5F00A727305BDC00D3FE59 /* ViewControllers */,
 				8EAC1B2927189B1700859E90 /* Assets.xcassets */,
-				8EAC1B2B27189B1700859E90 /* LaunchScreen.storyboard */,
-				8EAC1B2E27189B1700859E90 /* Info.plist */,
-				8EAC1B2627189B1600859E90 /* ToDoList.xcdatamodeld */,
+				8E5F00A827305BFE00D3FE59 /* Storyboards */,
+				8E5F00A927305C1200D3FE59 /* Services */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -137,8 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EAC1B2227189B1600859E90 /* ToDoListController .swift in Sources */,
-				8EAC1B352718AD3B00859E90 /* AddTaskViewController.swift in Sources */,
+				8E5F00AC27305C7800D3FE59 /* StorageManager.swift in Sources */,
 				8EAC1B1E27189B1600859E90 /* AppDelegate.swift in Sources */,
+				8E0FB1BB274185E700E33CC5 /* Extension + AlettController.swift in Sources */,
 				8EAC1B2827189B1600859E90 /* ToDoList.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L9WQ2FGRF6;
-				INFOPLIST_FILE = ToDoList/Info.plist;
+				INFOPLIST_FILE = ToDoList/Apps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,7 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L9WQ2FGRF6;
-				INFOPLIST_FILE = ToDoList/Info.plist;
+				INFOPLIST_FILE = ToDoList/Apps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
