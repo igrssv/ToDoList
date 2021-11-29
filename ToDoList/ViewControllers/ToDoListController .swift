@@ -91,10 +91,12 @@ extension ToDoListController {
     
     // Delete
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let task = taskList[indexPath.row]
+        
         if editingStyle == .delete {
             taskList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            StorageManager.shared.delete(taskList[indexPath.row])
+            StorageManager.shared.delete(task)
         }
     }
     
